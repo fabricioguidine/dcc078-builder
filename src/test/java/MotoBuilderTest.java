@@ -2,7 +2,6 @@ import org.example.MotoBuilder;
 import org.example.Moto;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 class MotoBuilderTest {
     @Test
     void deveRetornarExcecaoParaSemMarca() {
@@ -18,7 +17,6 @@ class MotoBuilderTest {
             assertEquals("Marca inválida.", e.getMessage());
         }
     }
-
     @Test
     void deveRetornarExcecaoParaSemModelo() {
         try{
@@ -33,7 +31,6 @@ class MotoBuilderTest {
             assertEquals("Modelo inválido.", e.getMessage());
         }
     }
-
     @Test
     void deveRetornarExcecaoParaSemAno() {
         try{
@@ -48,7 +45,6 @@ class MotoBuilderTest {
             assertEquals("Ano inválido.", e.getMessage());
         }
     }
-
     @Test
     void deveRetornarCarroValido() {
         MotoBuilder motoBuilder = new MotoBuilder();
@@ -57,10 +53,6 @@ class MotoBuilderTest {
                 .setModelo("fan")
                 .setAno(2011)
                 .build();
-
         assertNotNull(moto);
     }
-
-
-
 }

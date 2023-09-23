@@ -1,13 +1,10 @@
 package org.example;
-
 public class MotoBuilder {
-
     private Moto moto;
 
     public MotoBuilder(){
         moto = new Moto();
     }
-
     public Moto build(){
         if(moto.getMarca() == ""){
             throw new IllegalArgumentException("Marca inválida.");
@@ -20,7 +17,6 @@ public class MotoBuilder {
         }
         return moto;
     }
-
     public MotoBuilder setMarca(String marca) {
         moto.setMarca(marca);
         return this;
